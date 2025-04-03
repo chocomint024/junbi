@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New電波人間のRPG FREE!お役立ちサイト</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://chocomint024.github.io/New_Denpa_FREE/IMG_0044.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <img src="images/home.png" alt="サイトのヘッダー画像" class="header-image">
+
+    <div id="daily-event">
+    <img id="event-image" src="" alt="本日のイベント">
+</div>
+
+
+<script>
+    function updateEvent() {
+        // イベントごとの画像ファイル（画像は "images" フォルダ内に配置）
+        const eventImages = {
+            0: "images/event7.png",    // 日曜日
+            1: "images/event1.png",    // 月曜日
+            2: "images/event2.png",   // 火曜日
+            3: "images/event3.png", // 水曜日
+            4: "images/event4.png",  // 木曜日
+            5: "images/event5.png",    // 金曜日
+            6: "images/event6.png"   // 土曜日
+        };
+
+        // 現在の日時を取得
+        const now = new Date();
+        let day = now.getDay(); // 今日の曜日を取得
+        let hours = now.getHours(); // 現在の時間を取得
+
+        // 15時（午後3時）より前なら、前日の日付のイベントを表示
+        if (hours < 15) {
+            day = (day - 1 + 7) % 7; // 前日に変更（日曜日なら土曜日に戻す）
+        }
+
+        // 画像を変更
+        document.getElementById("event-image").src = eventImages[day];
+    }
+
+    // 初回実行
+    updateEvent();
+
+    // 1分ごとに更新（ページを開いたままでも自動更新）
+    setInterval(updateEvent, 60000);
+</script>
+
+
+
+
+        <nav>
+    <div class="grid-container">
+        <a href="https://chocomint024.github.io/QRkeizi/" target="_blank"><img src="images/ranboss.png" alt="ランボス攻略"></a>
+        <a href="https://chocomint024.github.io/QRkeizi/" target="_blank"><img src="images/iveste.png" alt="イベステ攻略"></a>
+        <a href="https://chocomint024.github.io/QRkeizi/" target="_blank"><img src="images/qr2.png" alt="QR共有掲示板"></a>
+        <a href="https://chocomint024.github.io/DenpaQR/" target="_blank"><img src="images/qr3.png" alt="QR生成"></a>
+    </div>
+</nav>
+
+<nav>
+    <ul class="vertical-list">
+        <li><a href="https://note.com/denpa_men/n/n8bdba80afd0b?sub_rt=share_pw" target="_blank">
+            <img src="images/ba.png" alt="バトルタワー攻略">
+        </a></li>
+        <li><a href="https://chocomint024.github.io/QRkeizi/">
+            <img src="images/taikaku.png" alt="体格表">
+        </a></li>
+        <li><a href="https://discord.gg/38FqVyRGAJ" target="_blank">
+            <img src="images/discord.png" alt="ディスコード鯖">
+        </a></li>
+        
+    </ul>
+</nav>
+
+        <div class="old-free-site">
+    <a href="https://takka0407.github.io/nanndemo/index.html" target="_blank">
+        <img src="images/kyufu.png" alt="旧FREEお役立ちサイト" class="hover-image">
+    </a>
+</div>
+         
+        </nav>
+<div class="twitter-account">
+    <p>作成者: <span>ちょこみんと</span></p>
+    <p>デザイン: <span>麺呂メ</span></p>
+    <br>
+    <a href="https://twitter.com/Denpa_men?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"></a>
+    <a href="https://twitter.com/men_rome?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false"></a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+    <div class="download-buttons">
+        <a href="https://play.google.com/store/apps/details?id=jp.geniussonority.newdenpafree" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Playでダウンロード">
+        </a>
+        <a href="https://apps.apple.com/jp/app/new-%E9%9B%BB%E6%B3%A2%E4%BA%BA%E9%96%93%E3%81%AErpg-free/id6466145265" target="_blank">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Storeでダウンロード">
+        </a>
+    </div>
+</div>
+
+
+
+
+<div class="twitter-timeline-container">
+    <a class="twitter-timeline" 
+       href="https://twitter.com/denpaningen?ref_src=twsrc%5Etfw" 
+       data-width="320" 
+       data-height="500" 
+       data-tweet-limit="5" 
+       data-theme="light"
+       data-chrome="noheader nofooter noborders">
+       Tweets by @denpaningen
+    </a>
+</div>
